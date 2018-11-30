@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { Container, Content, Form, Item, Input } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -8,7 +8,9 @@ export default class Profile extends React.Component {
         return (
             <View>
                 <Atas />
+                <Text></Text>
                 <Tengah />
+                <Text></Text>
                 <Bawah />
             </View>
 
@@ -21,7 +23,7 @@ export default class Profile extends React.Component {
 class Atas extends React.Component {
     render() {
         return (
-            <View>
+            <View style={styles.body}>
                 <Image style={styles.imageBody} source={require('../../logo.png')} />
                 <Text>NAMA SAYA</Text>
             </View>
@@ -73,23 +75,22 @@ class Bawah extends React.Component {
 
 const styles = StyleSheet.create({
 
-    body1: {
-        backgroundColor: 'green',
+    body: {
+        backgroundColor: '#fff',
         fontSize: 20,
-        flex: 10,
+        flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop:100
     },
-    body2: {
-        backgroundColor: 'yellow',
-        fontSize: 20,
-        flex: 10,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
+    
     imageBody: {
+      //  flex:1,
+        alignItems: 'center',
+        justifyContent:'center',
         height: 80,
         width: 80,
-        borderRadius: 40
+        borderRadius: 40,
+        //paddingTop:30
     }
 });
