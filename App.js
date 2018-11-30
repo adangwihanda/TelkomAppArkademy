@@ -5,6 +5,7 @@ import Home from './src/screen/Home';
 import Counter from './src/screen/Counter';
 import NativeBase from './src/screen/NativeBase';
 import Form from './src/screen/Form';
+import Profile from './src/screen/Profile';
 
 const App = createStackNavigator({
   Home: {
@@ -31,11 +32,19 @@ const App = createStackNavigator({
     }
   },
 
-  Form:{
+  Form: {
     screen: Form,
-    navigationOptions:{
-      title:'FORM',
-      color:'green'
+    navigationOptions: {
+      title: 'FORM',
+      color: 'green'
+    }
+  },
+
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      title: 'EDIT PROFILE',
+      color: 'green'
     }
   }
 

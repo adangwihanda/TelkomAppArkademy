@@ -39,14 +39,14 @@ export default class Body extends React.Component {
                     <Text> </Text>
                     <Button 
                         onPress={this.onPressLearnMore}
-                        title="Tombol"
-                        color="#841584"
+                        title="Tombol 1"
+                        color="green"
                         accessibilityLabel="Learn more about this purple button"
                     />
                     <Text></Text>
                     <Button
                         onPress={this.Tombol2}
-                        title="Tombol"
+                        title="Tombol 2"
                         color="#444444"
                         accessibilityLabel="Learn more about this purple button"
                     />
@@ -66,8 +66,10 @@ export default class Body extends React.Component {
     }
 
     onPressLearnMore = () => {
-                alert('Tombol Satu');
+        alert('Tombol Satu');
+
     }
+
 
     Tombol2 = () => {
         alert('Tombol Dua');

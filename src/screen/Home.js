@@ -25,6 +25,10 @@ export default class Home extends React.Component {
     }
 
 
+    handleProfile = () => {
+        this.props.navigation.navigate('Profile');
+    }
+
 
     render() {
         console.log('ini dalam render');
@@ -41,9 +45,15 @@ export default class Home extends React.Component {
                 <Text></Text>
 
                 <Button
-                    title="jendela baru"
+                    title="JENDELA"
                     color="black"
                     onPress={this.handleNativeBase}
+                />
+
+                <Button
+                    title="Profile"
+                    color="green"
+                    onPress={this.handleProfile}
                 />
                 {/* <Header title="HOME" /> */}
 

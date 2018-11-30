@@ -69,10 +69,17 @@ export default class NativeBase extends React.Component {
     this.props.navigation.navigate('Form');
   }
 
+  handleFormValue = (item) => () => {
+    this.props.navigation.navigate({
+     routeName: 'Form',
+     params:item
+    });
+
+  }
 
 
   renderList = (item, index) => {
-    return (<ListItem key={index}>
+    return (<ListItem key={item.id} onPress={this.handleFormValue(item)}>
       <Text>
         {item.title}
       
